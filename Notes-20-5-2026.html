@@ -1,0 +1,154 @@
+<html>
+        <head><title>Downloaded HTML</title></head>
+        <body>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Download Xbox 360 × Windows 98</title>
+<style>
+  body {
+    margin: 0; padding: 0; font-family: 'Tahoma', Arial, sans-serif;
+    background: linear-gradient(#001a00, #003300);
+    color: white; height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .container {
+    max-width: 700px;
+  }
+  h1 { font-size: 3rem; margin: 0; text-shadow: 0 0 20px #00ff00; }
+  p { font-size: 1.3rem; margin: 20px 0; }
+  .download-btn {
+    background: #00ff00;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 30px 0;
+    box-shadow: 0 0 30px #00ff00;
+    transition: all 0.3s;
+  }
+  .download-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px #00ff00;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🎮 Xbox 360 Blades × Windows 98</h1>
+  <p>Click the button below to download the full hybrid OS experience</p>
+  
+  <button class="download-btn" onclick="downloadFile()">
+    ⬇️ DOWNLOAD XBOX360.HTML
+  </button>
+  
+  <p style="font-size:1rem; opacity:0.8;">
+    After downloading, also place your startup video file in the same folder
+  </p>
+</div>
+
+<script>
+// The full code that will be downloaded
+const fullCode = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Xbox 360 Blades × Windows 98</title>
+<link rel="stylesheet" href="https://unpkg.com/98.css">
+<style>
+  body { margin:0; padding:0; overflow:hidden; background:#000; font-family:'Tahoma',sans-serif; height:100vh; }
+  #startup-screen { position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; z-index:1000; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  #startup-video { width:100%; height:100%; object-fit:contain; }
+  #dashboard { width:100vw; height:100vh; background:linear-gradient(to bottom,#001a00,#003300); position:relative; overflow:hidden; color:#fff; display:none; }
+  .xbox-logo { position:absolute; top:20px; left:40px; font-size:2.2rem; font-weight:bold; color:#00ff00; text-shadow:0 0 15px #00ff00; letter-spacing:4px; }
+  .blade { position:absolute; height:100%; width:280px; background:linear-gradient(90deg,rgba(0,80,0,0.95),rgba(0,140,0,0.85)); border-right:4px solid #00ff00; box-shadow:10px 0 30px rgba(0,255,0,0.3); display:flex; align-items:center; justify-content:center; flex-direction:column; color:white; }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding:40px; max-width:820px; margin:80px auto 0; }
+  .tile { background:rgba(255,255,255,0.1); border:3px solid #00ff00; padding:20px; text-align:center; cursor:pointer; transition:all 0.3s; border-radius:6px; font-size:1.1rem; }
+  .tile:hover { background:rgba(0,255,0,0.3); transform:scale(1.12); box-shadow:0 0 35px #00ff00; }
+  .window { position:absolute; background:#c0c0c0; border-top:2px solid #dfdfdf; border-left:2px solid #dfdfdf; border-right:2px solid #808080; border-bottom:2px solid #808080; box-shadow:4px 4px 0 #000; display:none; flex-direction:column; z-index:100; }
+  .title-bar { background:#000080; color:white; padding:4px 6px; font-weight:bold; display:flex; justify-content:space-between; align-items:center; }
+</style>
+</head>
+<body>
+
+<div id="startup-screen">
+  <video id="startup-video" autoplay playsinline style="max-width:100%; max-height:100%;">
+    <source src="Xbox 360 Startup (2010)_720p.MP4" type="video/mp4">
+  </video>
+</div>
+
+<div id="dashboard">
+  <div class="xbox-logo">XBOX 360</div>
+  <div class="blade">
+    <h1 style="font-size:2.8rem; margin:0; text-shadow:0 0 20px #00ff00;">BLADES</h1>
+    <p style="margin:10px 0 40px; opacity:0.9;">× WINDOWS 98</p>
+    <div class="tiles">
+      <div class="tile" onclick="openWin98App('notepad')">📝 Notepad</div>
+      <div class="tile" onclick="openWin98App('paint')">🎨 Paint</div>
+      <div class="tile" onclick="openMinesweeper()">💣 Minesweeper</div>
+      <div class="tile" onclick="openGrok()">🤖 Grok AI</div>
+      <div class="tile" onclick="openWin98App('solitaire')">🃏 Solitaire</div>
+      <div class="tile">🌐 Internet</div>
+      <div class="tile">🗃️ My Computer</div>
+      <div class="tile" onclick="shutdown()">⏻ Shut Down</div>
+    </div>
+  </div>
+</div>
+
+<div id="grok-window" class="window" style="width:540px;height:460px;left:32%;top:18%;">
+  <div class="title-bar">
+    <span>🤖 Grok AI Agent</span>
+    <span onclick="closeWindow('grok-window')" style="cursor:pointer;">×</span>
+  </div>
+  <div style="flex:1;background:white;color:black;padding:12px;overflow:auto;" id="grok-chat">
+    <p><strong>Grok:</strong> Welcome to the Xbox 360 Blades × Windows 98 hybrid!</p>
+  </div>
+  <input id="grok-input" type="text" style="width:100%;padding:10px;border-top:2px solid #808080;" placeholder="Ask Grok anything..." onkeypress="if(event.key==='Enter') sendGrok()">
+</div>
+
+<script>
+window.onload = () => { playXboxStartupSound(); setTimeout(transitionToDashboard, 7000); };
+function transitionToDashboard() {
+  const s = document.getElementById('startup-screen');
+  s.style.transition = "opacity 2s"; s.style.opacity = "0";
+  setTimeout(() => { s.style.display="none"; document.getElementById('dashboard').style.display="block"; }, 2000);
+}
+function playXboxStartupSound() { new Audio('https://assets.mixkit.co/sfx/preview/296/296.wav').play().catch(()=>{}); }
+function openWin98App(app) { alert('Launching ' + app.toUpperCase() + '...'); }
+function openMinesweeper() { alert('💣 Launching Minesweeper!'); }
+function openGrok() { document.getElementById('grok-window').style.display = 'flex'; }
+function closeWindow(id) { document.getElementById(id).style.display = 'none'; }
+function sendGrok() {
+  const input = document.getElementById('grok-input');
+  if (!input.value.trim()) return;
+  const chat = document.getElementById('grok-chat');
+  chat.innerHTML += '<p><strong>You:</strong> ' + input.value + '</p>';
+  setTimeout(() => { chat.innerHTML += '<p><strong>Grok:</strong> Xbox 360 + Win98 hybrid is live! What next? 🎮</p>'; chat.scrollTop = chat.scrollHeight; }, 600);
+  input.value = '';
+}
+function shutdown() {
+  if (confirm("Shut down?")) {
+    document.body.innerHTML = '<div style="color:#00ff00;text-align:center;margin-top:40vh;font-size:2.5rem;">System Shutting Down...</div>';
+  }
+}
+</script>
+</body>
+</html>`;
+
+function downloadFile() {
+  const blob = new Blob([fullCode], { type: 'text/html' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'xbox360.html';
+  link.click();
+}
+</script>
+</body>
+</html></pre>
+        </body>
+    </html>
